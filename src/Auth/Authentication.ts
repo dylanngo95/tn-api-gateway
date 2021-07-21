@@ -9,18 +9,16 @@ export async function expressAuthentication(
 ): Promise<JWTPayload> {
 
   if (securityName === "api_key") {
-    if (request.headers.authorization) {
-      let authHeader = request.headers.authorization || '';
-      if (authHeader.startsWith('Bearer ')) {
-        const token = authHeader.substring(7, authHeader.length);
-        const payload = jwt.verify(token, 'shhhhh');
-        return Promise.resolve({
-          id: 1,
-          email: (payload as any).email,
-          name: "Dylan",
-          createdAt: "2021"
-        });
-      }
+    let authHeader = request.headers.authorization || '';
+    if (authHeader.startsWith('Bearer ')) {
+      const token = authHeader.substring(7, authHeader.length);
+      const payload = jwt.verify(token, 'shhhhh');
+      return Promise.resolve({
+        id: 1,
+        email: (payload as any).email,
+        name: "Dylan",
+        createdAt: "2021"
+      });
     }
   }
   return Promise.reject('error');
