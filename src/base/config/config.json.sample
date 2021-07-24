@@ -1,0 +1,11 @@
+{
+     "environment": "production",
+     "mongo": {
+          "protocol": "mongodb",
+          "hostname": "localhost",
+          "port": 27017,
+          "db": "test",
+          "user": "admin",
+          "password": "admin"
+     }
+}

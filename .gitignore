@@ -1,3 +1,6 @@
 build
 .vscode
 node_modules
+src/base/config/*.json
+log
+mongodb

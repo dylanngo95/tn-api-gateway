@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { IocContainer } from '@tsoa/runtime';
 import { container } from 'tsyringe';
 

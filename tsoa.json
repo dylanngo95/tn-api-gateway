@@ -2,16 +2,16 @@
   "entryFile": "src/App.ts",
   "noImplicitAdditionalProperties": "throw-on-extras",
   "controllerPathGlobs": [
-    "src/**/*Controller.ts"
+    "src/features/**/*Controller.ts"
   ],
   "spec": {
     "outputDirectory": "build",
     "specVersion": 3
   },
   "routes": {
-    "authenticationModule": "src/Auth/Authentication.ts",
+    "authenticationModule": "src/features/auth/Authentication.ts",
     "middleware": "express",
     "routesDir": "build",
-    "iocModule": "src/Tsyringe/IOC"
+    "iocModule": "src/base/tsyringe/ioc"
   }
 }
